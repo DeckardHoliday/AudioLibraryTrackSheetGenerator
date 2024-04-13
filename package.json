@@ -1,0 +1,14 @@
+{
+  "name": "audiolibrarytracksheetgenerator",
+  "version": "1.0.0",
+  "description": "Generate a Track List for your Sound Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deckard Holiday",
+  "license": "ISC",
+  "dependencies": {
+    "music-metadata": "^7.14.0"
+  }
+}
