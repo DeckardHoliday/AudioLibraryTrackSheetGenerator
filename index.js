@@ -46,11 +46,13 @@ async function readFilesInFolder(folderPath, metadataList) {
       const index = metadataList.length + 1;
       try {
         const metadata = await mm.parseFile(filePath);
+        const extension = path.extname(file);
         metadataList.push({
           track_num: index,
           file_name: file,
           duration: secondsToTimecode(metadata.format.duration),
           format: formatBitRateAndDepth(metadata),
+          extension: extension.split('.')[1].toUpperCase(),
           channels: formatChannelCount(metadata.format.numberOfChannels)
         });
       } catch (error) {
@@ -65,9 +67,9 @@ const metadataList = [];
 
 readFilesInFolder(folderPath, metadataList).then(() => {
   // Create a CSV string
-  let csvContent = 'Track #, File Name,Duration,Format,Channels\n';
+  let csvContent = 'Track #, File Name,Duration,Format, File,Channels\n';
   metadataList.forEach(metadata => {
-    csvContent += `${metadata.track_num},${metadata.file_name},${metadata.duration},${metadata.format},${metadata.channels}\n`;
+    csvContent += `${metadata.track_num},${metadata.file_name},${metadata.duration},${metadata.format},${metadata.extension},${metadata.channels}\n`;
   });
 
   // Write CSV string to a file
