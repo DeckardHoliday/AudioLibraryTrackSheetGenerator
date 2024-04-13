@@ -16,11 +16,11 @@ node index.js <folder_path>
 
 The script formats your CSV as seen below:
 
-| Track Number | File Name | Duration | Format | Channel Count |
-|---|---|---|---|---|
-| 1 | my_audio_file_1.wav | 02:32 | 24 bit/48 kHz | Stereo |
-| 2 | my_audio_file_2.wav | 01:01 | 24 bit/48 kHz | Stereo |
-| 3 | my_audio_file_3.wav | 02:03:03 | 24 bit/48 kHz | Stereo |
-| 4 | my_audio_file_4.wav | 04:23 | 24 bit/48 kHz | Stereo |
+| Track Number | File Name | Duration | Format | File | Channel Count |
+|---|---|---|---|---|---|
+| 1 | my_audio_file_1.wav | 02:32 | 24 bit/48 kHz | WAV | Stereo |
+| 2 | my_audio_file_2.wav | 01:01 | 24 bit/48 kHz | OGG | Stereo |
+| 3 | my_audio_file_3.wav | 02:03:03 | 24 bit/48 kHz | MP3 | Stereo |
+| 4 | my_audio_file_4.wav | 04:23 | 24 bit/48 kHz | FLAC | Stereo |
 
 #### Your file will be found in the output folder when the script finishes execution.
