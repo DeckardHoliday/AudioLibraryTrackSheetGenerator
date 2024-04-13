@@ -75,11 +75,14 @@ fs.readdir(folderPath, async (err, files) => {
   });
 
   // Write CSV string to a file
-  fs.writeFile('metadata.csv', csvContent, (err) => {
-    if (err) {
-      console.error('Error writing to CSV file:', err);
-      return;
-    }
-    console.log('Metadata saved to metadata.csv');
-  });
+  fs.promises.mkdir("./dist/", {recursive: true}).then(
+    fs.writeFile('./dist/output.csv', csvContent, (err) => {
+        if (err) {
+          console.error('Error writing to CSV file:', err);
+          return;
+        }
+        console.log('Metadata saved to metadata.csv');
+      })
+    )   
+  
 });
