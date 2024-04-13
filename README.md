@@ -1,14 +1,19 @@
 # AudioLibraryTrackSheetGenerator
-Generates a sound library track list in CSV format
+This script generates a CSV file containing metadata for audio files within a specified folder and its subfolders.
 
 ## Usage
-To utilize this script, clone the repository, CD into the folder, and after installing dependencies (`npm i`), run the following command:
+1. Confirm you have Node.js installed on your system.
+2. Install the required dependencies by running `npm install` in the terminal.
+3. Run the script with the following command:
 
-`node index.js your-directory-path`
+```
+node index.js <folder_path>
+```
 
-The directory path should be the path inside of the folder containing all your audio files.
+#### Note: Replace <folder_path> with the path to the directory containing your audio files.
 
-## Format
+## Output
+
 The script formats your CSV as seen below:
 
 | Track Number | File Name | Duration | Format | Channel Count |
@@ -18,5 +23,4 @@ The script formats your CSV as seen below:
 | 3 | my_audio_file_3.wav | 02:03:03 | 24 bit/48 kHz | Stereo |
 | 4 | my_audio_file_4.wav | 04:23 | 24 bit/48 kHz | Stereo |
 
-## Output
-The CSV file is saved to `/output/tracklist.csv'
+#### Your file will be found in the output folder when the script finishes execution.
