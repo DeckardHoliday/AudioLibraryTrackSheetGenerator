@@ -66,7 +66,7 @@ const folderPath = process.argv[2];
 const metadataList = [];
 
 readFilesInFolder(folderPath, metadataList).then(() => {
-  // Create a CSV string
+  // Create a CSV string. csvContent is hte headers for each column
   let csvContent = 'Track #, File Name,Duration,Format, File,Channels\n';
   metadataList.forEach(metadata => {
     csvContent += `${metadata.track_num},${metadata.file_name},${metadata.duration},${metadata.format},${metadata.extension},${metadata.channels}\n`;
