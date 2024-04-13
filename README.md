@@ -17,3 +17,6 @@ The script formats your CSV as seen below:
 | 2 | my_audio_file_2.wav | 01:01 | 24 bit/48 kHz | Stereo |
 | 3 | my_audio_file_3.wav | 02:03:03 | 24 bit/48 kHz | Stereo |
 | 4 | my_audio_file_4.wav | 04:23 | 24 bit/48 kHz | Stereo |
+
+## Output
+The CSV file is saved to `/output/tracklist.csv'
