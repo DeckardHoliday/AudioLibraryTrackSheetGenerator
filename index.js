@@ -41,7 +41,7 @@ async function readFilesInFolder(folderPath, metadataList) {
     const filePath = path.join(folderPath, file);
     const stats = await fs.promises.stat(filePath);
     if (stats.isDirectory()) {
-      await readFilesInFolder(filePath, metadataList); // Recursively read files in subfolders
+      await readFilesInFolder(filePath, metadataList);
     } else {
       const index = metadataList.length + 1;
       try {
