@@ -6,7 +6,7 @@ To utilize this script, clone the repository, CD into the folder, and after inst
 
 `node index.js your-directory-path`
 
-The directory path should be the path to the inside of the folder containing all your audio files.
+The directory path should be the path inside of the folder containing all your audio files.
 
 ## Format
 The script formats your CSV as seen below:
