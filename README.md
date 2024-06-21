@@ -1,4 +1,4 @@
-# AudioLibraryTrackSheetGenerator
+# Audio Library TrackSheet Generator
 This script generates a CSV file containing metadata for audio files within a specified folder and its subfolders.
 
 ## Usage
